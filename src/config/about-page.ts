@@ -11,66 +11,10 @@ export const aboutPageImages = {
   hero: "/assets/images/about/hero.jpg",
   whoWeAre: "/assets/images/about/who-we-are.jpg",
   valuesInterior: "/assets/images/about/values-interior.jpg",
+  team: "/assets/images/about/team.jpg",
   process: "/assets/images/about/process.jpg",
   cta: "/assets/images/about/cta.jpg",
 } as const;
-
-const teamPhoto = (file: string) => `/assets/images/about/photos/${file}` as const;
-
-export type AboutTeamMember = {
-  name: string;
-  title: string;
-  image: string;
-  imageAlt: string;
-  email: string;
-  phoneDisplay: string;
-  phoneTel: string;
-  /** Optional office / mailing address shown on the team card */
-  address?: string;
-};
-
-/** Team headshots — filenames match `public/assets/images/about/photos/`. */
-export const aboutTeamMembers: readonly AboutTeamMember[] = [
-  {
-    name: "Jonathan Martin, PE",
-    title: "Principal engineer",
-    image: teamPhoto("Jonathan Martin.webp"),
-    imageAlt: "Jonathan Martin, PE — principal engineer at Nationwide Engineering Plans",
-    email: siteConfig.contact.email,
-    phoneDisplay: siteConfig.contact.phones.hq.display,
-    phoneTel: `tel:+${siteConfig.contact.phones.hq.digits}`,
-  },
-  {
-    name: "Joseph Miller",
-    title: "Architect",
-    image: teamPhoto("Joseph Miller .webp"),
-    imageAlt: "Joseph Miller — architect at Nationwide Engineering Plans",
-    email: "joseph.nationwideengineering@gmail.com",
-    phoneDisplay: siteConfig.contact.phones.ny.display,
-    phoneTel: `tel:+${siteConfig.contact.phones.ny.digits}`,
-    address: "56 Majestic Ave, San Francisco, CA 94112, USA",
-  },
-  {
-    name: "Oleksii Datsko",
-    title: "Architectural drafter",
-    image: teamPhoto("Oleksii Datsko.jpg"),
-    imageAlt: "Oleksii Datsko — architectural drafter at Nationwide Engineering Plans",
-    email: "salraygranata@gmail.com",
-    phoneDisplay: "+380 96 910 7658",
-    phoneTel: "tel:+380969107658",
-    address: "Street Hliserna, Building 28, Zaporizhzhia 69011, Ukraine",
-  },
-  {
-    name: "Kris Simonsen",
-    title: "Engineering coordination",
-    image: teamPhoto("Kris Simonsen.webp"),
-    imageAlt: "Kris Simonsen — engineering coordination at Nationwide Engineering Plans",
-    email: "simonsenkristopher@gmail.com",
-    phoneDisplay: "(231) 413-8238",
-    phoneTel: "tel:+12314138238",
-    address: "1738 Dexter Avenue North, Seattle, WA 98109, USA",
-  },
-];
 
 export const aboutWhoWeAre = {
   eyebrow: "Who we are",
@@ -99,9 +43,9 @@ export const aboutValues = {
 
 export const aboutTeam = {
   eyebrow: "Our team",
-  headline: "Licensed engineers behind every stamped set",
+  headline: "Experienced professionals behind every package",
   body:
-    "Principals, engineers, and drafters stay on your job from kickoff through plan check—reach the right person directly when you need an answer.",
+    "Multidiscipline projects need people who talk to each other before the sheets hit the portal. Our leads coordinate structure, envelope, and systems so redlines do not become surprises on site.",
   skills: [
     { label: "Plan review readiness", pct: 92 },
     { label: "Code & energy coordination", pct: 88 },
